@@ -12,13 +12,37 @@
   
 // })
 
-import express from "express" ;
+// import express from "express" ;
+// const app = express() ;
+// app.get('/',(req, res)=>{
+//   res.send('server running') ;
+// })
+
+// const port = process.env.port || 3000 ;
+// app.listen(port,()=>{
+//   console.log('learning bacend');
+// })
+
+
+// import express from 'express' ;
+// const app = express() ;
+// app.get('/' ,(req,res)=>{
+//   res.send("server is running") ;
+// }) 
+
+// const port = process.env.port || 3000 ;
+// app.listen(port ,()=>{
+//   console.log("learning backend with consistency inshallah") ;
+// })
+
+import express from 'express' ;
 const app = express() ;
-app.get('/',(req, res)=>{
-  res.send('server running') ;
+app.get('/',(req,res)=>{
+  res.send('server is ready') ;
 })
 
+
 const port = process.env.port || 3000 ;
-app.listen(port,()=>{
-  console.log('learning bacend');
+app.listen(port ,()=>{
+  console.log('learning backend') ;
 })
