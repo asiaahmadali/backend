@@ -1,48 +1,29 @@
-// import express from "express" ;
-// const app = express() ;
+import express from "express" ;
 
-// app.get('/',(req,res)=>{
-//   res.send("server is ready") ;
-// })
-
-// const port = process.env.PORT|| 3000 ;
-
-// app.listen(port,()=>{
-//   console.log('i am serving backend services');
-  
-// })
-
-// import express from "express" ;
-// const app = express() ;
-// app.get('/',(req, res)=>{
-//   res.send('server running') ;
-// })
-
-// const port = process.env.port || 3000 ;
-// app.listen(port,()=>{
-//   console.log('learning bacend');
-// })
-
-
-// import express from 'express' ;
-// const app = express() ;
-// app.get('/' ,(req,res)=>{
-//   res.send("server is running") ;
-// }) 
-
-// const port = process.env.port || 3000 ;
-// app.listen(port ,()=>{
-//   console.log("learning backend with consistency inshallah") ;
-// })
-
-import express from 'express' ;
 const app = express() ;
-app.get('/',(req,res)=>{
-  res.send('server is ready') ;
+const jokes = [
+  {
+    id:1,
+    name:"joke 1" ,
+    des:"joke of the app"
+  },
+  {
+    id:2,
+    name:"joke 2" ,
+    des:"joke of the app"
+  },
+  {
+    id:1,
+    name:"joke 3" ,
+    des:"joke of the app"
+  },
+]
+app.get('/api/jokes',(req,res)=>{
+  res.send(jokes) ;
 })
 
-
 const port = process.env.port || 3000 ;
-app.listen(port ,()=>{
-  console.log('learning backend') ;
+
+app.listen(port,()=>{
+  console.log("server is listening");
 })
