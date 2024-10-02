@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <h1>chai aur backend</h1>
-      <p>jokes list is : {jokes.length}</p>
+      <p>jokes list is here : {jokes.length}</p>
 
       {jokes.map((joke) => {
         <div key={joke.id}>
