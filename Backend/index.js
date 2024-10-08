@@ -1,29 +1,36 @@
-import express from "express" ;
-
+import express from 'express' ;
 const app = express() ;
+
 const jokes = [
   {
-    id:1,
-    name:"joke 1" ,
-    des:"joke of the app"
+    id:'joke 1',
+    des:'it is joke 1 description'
   },
   {
-    id:2,
-    name:"joke 2" ,
-    des:"joke of the app"
+    id:'joke 2',
+    des:'it is joke 2 description'
   },
   {
-    id:1,
-    name:"joke 3" ,
-    des:"joke of the app"
+    id:'joke 3',
+    des:'it is joke 3 description'
+  },
+  {
+    id:'joke 4',
+    des:'it is joke 4 description'
   },
 ]
-app.get('/api/jokes',(req,res)=>{
-  res.send(jokes) ;
+
+app.get('/jokes',(req, res)=>{
+     res.send(jokes) ;
+})
+
+app.get('/',(req,res)=>{
+  res.send('server is ready okkk got it') ;
 })
 
 const port = process.env.port || 3000 ;
 
 app.listen(port,()=>{
   console.log("server is listening");
+  
 })
