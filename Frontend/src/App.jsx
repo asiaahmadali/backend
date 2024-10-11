@@ -49,7 +49,7 @@ function App() {
     <>
       <div>
         <h1>jokes are :</h1>
-        <p>jokes length is : {jokes}</p>
+        <p>jokes length: {jokes}</p>
 
         {jokes.map((joke) => {
           return (
